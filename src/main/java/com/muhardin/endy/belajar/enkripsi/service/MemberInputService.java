@@ -1,8 +1,7 @@
 package com.muhardin.endy.belajar.enkripsi.service;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import com.muhardin.endy.belajar.enkripsi.entity.Member;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface MemberInputService {
     void save(Member member, MultipartFile fileKtp);

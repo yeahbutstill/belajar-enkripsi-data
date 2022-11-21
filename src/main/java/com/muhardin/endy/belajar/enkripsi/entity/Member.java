@@ -1,6 +1,8 @@
 package com.muhardin.endy.belajar.enkripsi.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -8,24 +10,28 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-@Data @Entity
-public class Member {
+@Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Member implements Serializable {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     private String id;
 
-    @NotNull @NotEmpty
+    @NotEmpty(message = "Nama wajib diisi")
     private String nama;
 
-    @NotNull @NotEmpty
+    @NotEmpty(message = "No KTP wajib diisi")
     private String noKtp;
 
     @Transient
     private String noKtpPlain;
 
     private String fileKtpMimeType;
+
 }

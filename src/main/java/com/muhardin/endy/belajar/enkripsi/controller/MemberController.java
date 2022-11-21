@@ -1,5 +1,7 @@
 package com.muhardin.endy.belajar.enkripsi.controller;
 
+import com.muhardin.endy.belajar.enkripsi.entity.Member;
+import com.muhardin.endy.belajar.enkripsi.service.MemberInputService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.muhardin.endy.belajar.enkripsi.entity.Member;
-import com.muhardin.endy.belajar.enkripsi.service.MemberInputService;
 
 import javax.validation.Valid;
 

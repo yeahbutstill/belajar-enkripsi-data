@@ -1,13 +1,12 @@
 package com.muhardin.endy.belajar.vault.service;
 
+import com.muhardin.endy.belajar.enkripsi.service.VaultService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
-
-import com.muhardin.endy.belajar.enkripsi.service.VaultService;
 
 import java.io.File;
 import java.io.IOException;
